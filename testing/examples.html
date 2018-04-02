@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Examples!</title>
+  <!-- Normalize.css CDN: Aids in making browsers render all elements more consistently. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <!-- AgileTracker CSS Framework -->
+  <link rel="stylesheet" href="../applications/assets/css/main.css">
+</head>
+<body class="alignh-center">
+  <h1 style="text-align:center;">Example Form Container</h1>
+  <div class="container" style="display:flex;flex-direction:row;width:85%;margin:auto;margin-top:25px;">
+    <div class="container" style="width:50%;margin-right:30px;">
+      <h2 class="text-alignh-center">Attendance Tracker</h2>
+      <br />
+      <form>
+        <section>
+          <label for="username">Username</label><br>
+          <input name="username" type="text" placeholder="user"></input>
+        </section>
+        <section>
+          <label for="username">Password</label><br>
+          <input name="username" type="text" placeholder="•••••••"></input>
+        </section>
+        <section>
+          <button type="button" name="button" class="form-button">Submit</button>
+        </section>
+      </form>
+    </div>
+    <div class="container" style="width:50%">
+      <code>
+        &lt;div class=&quot;container&quot;&gt;<br />
+          &lt;h2 class=&quot;text-alignh-center&quot;&gt;Attendance Tracker&lt;/h2&gt;<br />
+          &lt;br /&gt;<br />
+          &lt;form&gt;<br />
+            &lt;section&gt;<br />
+              &lt;label for=&quot;username&quot;&gt;Username&lt;/label&gt;&lt;br&gt;<br />
+              &lt;input name=&quot;username&quot; type=&quot;text&quot; placeholder=&quot;user&quot;&gt;&lt;/input&gt;<br />
+            &lt;/section&gt;<br />
+            &lt;section&gt;<br />
+              &lt;label for=&quot;username&quot;&gt;Password&lt;/label&gt;&lt;br&gt;<br />
+              &lt;input name=&quot;username&quot; type=&quot;text&quot; placeholder=&quot;•••••••&quot;&gt;&lt;/input&gt;<br />
+            &lt;/section&gt;<br />
+            &lt;section&gt;<br />
+              &lt;button type=&quot;button&quot; name=&quot;button&quot;<br /> class=&quot;form-button&quot;&gt;Submit&lt;/button&gt;<br />
+            &lt;/section&gt;<br />
+          &lt;/form&gt;<br />
+        &lt;/div&gt;<br />
+      </code>
+    </div>
+  </div>
+  <br />
+  <br />
+  <h1 style="text-align:center;">Example Table</h1>
+  <div class="container" style="display:flex;flex-direction:row;width:85%;margin:auto;margin-top:25px;">
+    <div class="container" style="width:50%;margin-right:30px;">
+      <table>
+        <thead>
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container" style="width:50%">
+      <code>
+        &lt;div class=&quot;container&quot;&gt;<br />
+          &lt;table&gt;<br />
+            &lt;thead&gt;<br />
+              &lt;tr&gt;<br />
+                &lt;th&gt;Firstname&lt;/th&gt;<br />
+                &lt;th&gt;Lastname&lt;/th&gt;<br />
+                &lt;th&gt;Age&lt;/th&gt;<br />
+              &lt;/tr&gt;<br />
+            &lt;/thead&gt;<br />
+            &lt;tbody&gt;<br />
+              &lt;tr&gt;<br />
+                &lt;td&gt;Jill&lt;/td&gt;<br />
+                &lt;td&gt;Smith&lt;/td&gt;<br />
+                &lt;td&gt;50&lt;/td&gt;<br />
+              &lt;/tr&gt;<br />
+              &lt;tr&gt;<br />
+                &lt;td&gt;Eve&lt;/td&gt;<br />
+                &lt;td&gt;Jackson&lt;/td&gt;<br />
+                &lt;td&gt;94&lt;/td&gt;<br />
+              &lt;/tr&gt;<br />
+            &lt;/tbody&gt;<br />
+          &lt;/table&gt;<br />
+        &lt;/div&gt;<br />
+      </code>
+    </div>
+  </div>
+  <br />
+  <br />
+  <h1 style="text-align:center;">Example Table with Form Data</h1>
+  <div class="container" style="display:flex;flex-direction:row;width:85%;margin:auto;margin-top:25px;">
+    <div class="container" style="width:70%;">
+      <table>
+        <form>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jill Smith</td>
+              <td>
+                <section>
+                  <label class="radio inline">
+                    <input type="radio" name="student_1" value="0">
+                    <span>Present</span>
+                  </label>
+                  <label class="radio inline">
+                    <input type="radio" name="student_1" value="0">
+                    <span>Absent</span>
+                  </label>
+                  <label class="radio inline">
+                    <input type="radio" name="student_1" value="0">
+                    <span>Late</span>
+                  </label>
+                </section>
+              </td>
+            </tr>
+            <tr>
+              <td>Eve Jackson</td>
+              <td>
+                <section>
+                  <label class="radio inline">
+                    <input type="radio" name="student_2" value="0">
+                    <span>Present</span>
+                  </label>
+                  <label class="radio inline">
+                    <input type="radio" name="student_2" value="0">
+                    <span>Absent</span>
+                  </label>
+                  <label class="radio inline">
+                    <input type="radio" name="student_2" value="0">
+                    <span>Late</span>
+                  </label>
+                </section>
+              </td>
+            </tr>
+          </tbody>
+        </form>
+      </table>
+    </div>
+    <div class="container" style="width:50%">
+      <code>
+        &lt;div class=&quot;container&quot;&gt;<br />
+          &lt;table&gt;<br />
+            &lt;form&gt;<br />
+              &lt;thead&gt;<br />
+                &lt;tr&gt;<br />
+                  &lt;th&gt;Name&lt;/th&gt;<br />
+                  &lt;th&gt;Status&lt;/th&gt;<br />
+                &lt;/tr&gt;<br />
+              &lt;/thead&gt;<br />
+              &lt;tbody&gt;<br />
+                &lt;tr&gt;<br />
+                  &lt;td&gt;Jill Smith&lt;/td&gt;<br />
+                  &lt;td&gt;<br />
+                    &lt;section&gt;<br />
+                      &lt;label class=&quot;radio inline&quot;&gt;<br />
+                        &lt;input type=&quot;radio&quot; name=&quot;student_1&quot; value=&quot;0&quot;&gt;<br />
+                        &lt;span&gt;Present&lt;/span&gt;<br />
+                      &lt;/label&gt;<br />
+                      &lt;label class=&quot;radio inline&quot;&gt;<br />
+                        &lt;input type=&quot;radio&quot; name=&quot;student_1&quot; value=&quot;0&quot;&gt;<br />
+                        &lt;span&gt;Absent&lt;/span&gt;<br />
+                      &lt;/label&gt;<br />
+                      &lt;label class=&quot;radio inline&quot;&gt;<br />
+                        &lt;input type=&quot;radio&quot; name=&quot;student_1&quot; value=&quot;0&quot;&gt;<br />
+                        &lt;span&gt;Late&lt;/span&gt;<br />
+                      &lt;/label&gt;<br />
+                    &lt;/section&gt;<br />
+                  &lt;/td&gt;<br />
+                &lt;/tr&gt;<br />
+                &lt;tr&gt;<br />
+                  &lt;td&gt;Eve Jackson&lt;/td&gt;<br />
+                  &lt;td&gt;<br />
+                    &lt;section&gt;<br />
+                      &lt;label class=&quot;radio inline&quot;&gt;<br />
+                        &lt;input type=&quot;radio&quot; name=&quot;student_2&quot; value=&quot;0&quot;&gt;<br />
+                        &lt;span&gt;Present&lt;/span&gt;<br />
+                      &lt;/label&gt;<br />
+                      &lt;label class=&quot;radio inline&quot;&gt;<br />
+                        &lt;input type=&quot;radio&quot; name=&quot;student_2&quot; value=&quot;0&quot;&gt;<br />
+                        &lt;span&gt;Absent&lt;/span&gt;<br />
+                      &lt;/label&gt;<br />
+                      &lt;label class=&quot;radio inline&quot;&gt;<br />
+                        &lt;input type=&quot;radio&quot; name=&quot;student_2&quot; value=&quot;0&quot;&gt;<br />
+                        &lt;span&gt;Late&lt;/span&gt;<br />
+                      &lt;/label&gt;<br />
+                    &lt;/section&gt;<br />
+                  &lt;/td&gt;<br />
+              &lt;/tr&gt;<br />
+            &lt;/tbody&gt;<br />
+          &lt;/form&gt;<br />
+        &lt;/table&gt;<br />
+        &lt;/div&gt;<br />
+      </code>
+    </div>
+  </div>
+</body>
+</html>

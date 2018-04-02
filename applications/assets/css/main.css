@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway|Roboto");
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 100vh;
+}
+body .container {
+  box-shadow: 2px 2px 4px #888888;
+  padding: 20px;
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.8em;
+}
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6em;
+}
+h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4em;
+}
+h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2em;
+}
+h5 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.0em;
+}
+
+form {
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+form section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+form section label {
+  width: 100%;
+  font-size: .9em;
+  text-align: center;
+  font-variant-caps: all-small-caps;
+  margin-bottom: 5px;
+}
+form section input {
+  padding: 5px;
+  border-radius: 7px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #cfcfcf;
+}
+form section input .horizontal {
+  display: inline-block;
+}
+
+button {
+  background: #3D5A80;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 1px;
+  border-style: none;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-size: 1.2em;
+  text-decoration: none;
+  padding: 8px 4px 8px 4px;
+}
+button:hover {
+  border-radius: 25px;
+  transition: .5s;
+}
+button:active {
+  background: #98C1D9;
+  transform: translateY(2px);
+  transition: .1s;
+}
+
+table {
+  text-align: left;
+  width: 100%;
+}
+table thead {
+  border-radius: 10px;
+}
+table thead tr {
+  background: #98C1D9;
+  line-height: 2.2em;
+}
+table thead th {
+  padding-left: 20px;
+}
+table tbody {
+  margin: 10px;
+}
+table tbody tr {
+  background: #ffffff;
+  line-height: 2.2em;
+}
+table tbody tr td {
+  padding-left: 20px;
+}
+table tbody tr:nth-child(even) {
+  background: #eeeeee;
+}
+table tfoot ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  margin: 12px;
+}
+table tfoot ul li {
+  display: inline;
+}
+table tfoot ul li a {
+  background: #3D5A80;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 1px;
+  border-style: none;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-size: 1.2em;
+  text-decoration: none;
+  padding: 8px;
+}
+
+table tfoot ul li a:hover {
+  border-radius: 25px;
+  transition: .5s;
+}
+
+table tfoot ul li a:active {
+  background: #98C1D9;
+  transform: translateY(2px);
+  transition: .1s;
+}
+
+/* Free Input Classes: Inline Radio Buttons */
+.inline{
+  display: inline-block;
+}
+.inline + .inline{
+  margin-left:10px;
+}
+.radio{
+  color:#999;
+  font-size:15px;
+  position:relative;
+}
+.radio span{
+  position:relative;
+  padding-left:20px;
+}
+.radio span:after{
+  content:'';
+  width:15px;
+  height:15px;
+  border:3px solid;
+  position:absolute;
+  left:0;
+  top:1px;
+  border-radius:100%;
+  -ms-border-radius:100%;
+  -moz-border-radius:100%;
+  -webkit-border-radius:100%;
+  box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+.radio input[type="radio"]{
+  cursor: pointer;
+  position:absolute;
+  width:100%;
+  height:100%;
+  z-index: 1;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+}
+.radio input[type="radio"]:checked + span{
+  color:#0B8;
+}
+.radio input[type="radio"]:checked + span:before{
+  content:'';
+  width:5px;
+  height:5px;
+  position:absolute;
+  background:#0B8;
+  left:5px;
+  top:6px;
+  border-radius:100%;
+  -ms-border-radius:100%;
+  -moz-border-radius:100%;
+  -webkit-border-radius:100%;
+}
+
+/* Content Alignment Classes */
+.alignv-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.alignv-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alignv-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.alignh-left {
+  float: left;
+}
+
+.alignh-center {
+  margin: auto;
+}
+
+.alignh-right {
+  float: right;
+}
+
+.text-alignh-left {
+  text-align: left;
+}
+
+.text-alignh-center {
+  text-align: center;
+}
+
+.text-alignh-right {
+  text-align: right;
+}
