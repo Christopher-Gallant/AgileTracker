@@ -10,7 +10,7 @@
     </header>
     <main>
       <?php
-        $courseSelection = file('classSelectionList.txt');
+        $courseSelection = file('data/classSelectionList.txt');
         $instructor = trim($courseSelection[0]);
           echo "Classes available for $instructor:<br>";
           echo '<form class="Class Selection" action="courseAttendance.html" method="post">

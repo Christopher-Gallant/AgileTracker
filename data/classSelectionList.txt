@@ -1,0 +1,5 @@
+Steve Robinett
+CSCI 101-01;  Arnold Rimmer;  Cat;  Dave Lister;  Kryten; Holly;  Kristine Kochanski
+CSCI 102-01;  Jean-Luc Picard;  William Riker;  Data; Geordi La Forge;  Tasha Yar;  Worf; Beverly Crusher;  Wesley Crusher
+CSCI 103-01;  Malcolm Reynolds; Jayne Cobb; River Tam;  Inara Serra;  Kaylee Frye;  Hoban Washburn; Shepherd Book
+CSCI 103-99;  William Hartnell; Patrick Trpughton;  Jon Pertwee;  Tom Baker;  Peter Davidson; Colin Baker;  Sylvester McCoy;  Paul McGann;  Christopher Eccelston;  David Tennent;  Matt Smith; Peter Capaldi; Jodie Whittaker
