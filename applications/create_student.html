@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Add a student</title>
+	<!-- Normalize.css: Aids in making browsers render all elements more consistently. -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+	<!-- AgileTracker CSS Framework -->
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="alignh-center">
+	<h1 style="text-align:center;">Create A Student</h1>
+	<div class="container" style="display:flex;flex-direction:row;width:85%;margin:auto;margin-top:25px;">
+    <div class="container" style="width:100%;">
+		<br />
+		<p>Please enter the following data for the student...</p>
+		<form action="../business/student_created.php" method="post">
+			<label>Student ID</label><br>
+			<input name="stu_id" type="number" min="0" placeholder="00000000"/><br><br>
+			<label>Name</label><br>
+			<input name="name" type="text" placeholder="Siri Sophia"/><br><br>
+			<p>You may enter up to 5 classes.<br></p>
+			<label>Class</label><br>
+			<input name="class_id1" type="text" placeholder="CSCI 101-01"/>
+			<input name="class_id2" type="text" placeholder="Class Name"/>
+			<input name="class_id3" type="text" placeholder="Class Name"/>
+			<input name="class_id4" type="text" placeholder="Class Name"/>
+			<input name="class_id5" type="text" placeholder="Class Name"/><br><br>
+			<p><input type="submit" name="submit" value="Submit"></p>
+      </form>
+    </div>
+	</div>
+</body>
+</html>
