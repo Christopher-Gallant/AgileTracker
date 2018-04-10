@@ -34,17 +34,28 @@ CREATE TABLE `Role`
 PRIMARY KEY (`roleID`)
 );
 
--- ************************************** `Attendee`
+-- ************************************** `Student`
 
-CREATE TABLE `Attendee`
+CREATE TABLE `Student`
 (
- `studentID` INT NOT NULL AUTO_INCREMENT ,
- `name`      VARCHAR(45) NOT NULL ,
- `classID`   INT NOT NULL ,
+ `StudentID`    INT NOT NULL ,
+ `Student_Name` VARCHAR(45) NOT NULL ,
 
-PRIMARY KEY (`studentID`),
-KEY `fkIdx_71` (`classID`),
-CONSTRAINT `FK_71` FOREIGN KEY `fkIdx_71` (`classID`) REFERENCES `Class` (`classID`)
+PRIMARY KEY (`StudentID`)
+);
+
+-- ************************************** `Student_Course`
+
+CREATE TABLE `Student_Course`
+(
+ `StudentID` INT NOT NULL ,
+ `CourseID`  INT NOT NULL ,
+
+PRIMARY KEY (`StudentID`, `CourseID`),
+KEY `fkIdx_49` (`StudentID`),
+CONSTRAINT `FK_49` FOREIGN KEY `fkIdx_49` (`StudentID`) REFERENCES `Student` (`StudentID`),
+KEY `fkIdx_53` (`CourseID`),
+CONSTRAINT `FK_53` FOREIGN KEY `fkIdx_53` (`CourseID`) REFERENCES `CourseSection` (`CourseID`)
 );
 
 -- ************************************** `User`
