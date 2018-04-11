@@ -11,7 +11,7 @@
 
     public function insert($arr){
       
-      $qry = "INSERT INTO classes (classID, className, classSection, classSemester, classInstructor, classScheduleMonStart, classScheduleMonEnd, classScheduleTuesStart, classScheduleTuesEnd, classScheduleWedStart, classScheduleWedEnd, classScheduleThursStart, classScheduleThursEnd, classScheduleFriStart, classScheduleFriEnd) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+      $qry = "INSERT INTO Classes (classID, className, classSection, classSemester, classInstructor, classScheduleMonStart, classScheduleMonEnd, classScheduleTuesStart, classScheduleTuesEnd, classScheduleWedStart, classScheduleWedEnd, classScheduleThursStart, classScheduleThursEnd, classScheduleFriStart, classScheduleFriEnd) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
       if($stmt = $conn->prepare($qry)){
         $stmt->bind_param('sssssssssssssss',
