@@ -10,7 +10,7 @@
     }
 
     public function insert($arr){
-      
+
       $qry = "INSERT INTO students (studentID, studentName) VALUES (?, ?)";
 
       if($stmt = $conn->prepare($qry)){
@@ -25,18 +25,18 @@
     }
 
 
-    
-    
-    
-    
-    
+
+
+
+
+
     public function selectSingle($key){
       $qry = 'SELECT * FROM Students WHERE studentID = ?';
-      
+
       $stmt = $this->conn->prepare($qry);
       $stmt->bind_param('s', $key);
       $stmt->execute();
-      
+
       $stmt->bind_result(
         $this->studentID,
         $this->studentName
@@ -58,9 +58,8 @@
 
 
 
-    public function selectAll($sel_all){
-      $sel_all = '*';
-      $qry = 'SELECT '. $sel_all.' FROM Students';
+    public function selectAll(){
+      $qry = 'SELECT * FROM Students';
       $stmt = $this->conn->prepare($qry);
       $stmt->execute();
       $stmt->store_result();

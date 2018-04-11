@@ -10,7 +10,7 @@
     }
 
     public function insert($arr){
-      
+
       $qry = "INSERT INTO Classes (classID, className, classSection, classSemester, classInstructor, classScheduleMonStart, classScheduleMonEnd, classScheduleTuesStart, classScheduleTuesEnd, classScheduleWedStart, classScheduleWedEnd, classScheduleThursStart, classScheduleThursEnd, classScheduleFriStart, classScheduleFriEnd) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
       if($stmt = $conn->prepare($qry)){
@@ -47,25 +47,25 @@
         $this->classScheduleThursEnd = $conn->real_escape_string($arr['classScheduleThursEnd']);
         $this->classScheduleFriStart = $conn->real_escape_string($arr['classScheduleFriStart']);
         $this->classScheduleFriEnd = $conn->real_escape_string($arr['classScheduleFriEnd']);
-      
 
-        
+
+
       }
     }
 
 
-    
-    
-    
-    
-    
+
+
+
+
+
     public function selectSingle($key){
       $qry = 'SELECT * FROM Classes WHERE classID = ?';
-      
+
       $stmt = $this->conn->prepare($qry);
       $stmt->bind_param('s', $key);
       $stmt->execute();
-      
+
       $stmt->bind_result(
         $this->classID,
         $this->className,
@@ -113,9 +113,8 @@
 
 
 
-    public function selectAll($sel_all){
-      $sel_all = '*';
-      $qry = 'SELECT '. $sel_all.' FROM Classes';
+    public function selectAll(){
+      $qry = 'SELECT * FROM Classes';
       $stmt = $this->conn->prepare($qry);
       $stmt->execute();
       $stmt->store_result();
