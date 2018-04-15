@@ -31,19 +31,13 @@
 		$fri_start = $_POST["fri_start"];
 		$fri_end = $_POST["fri_end"];
 		
-		$db = mysqli_connect("db732216864.db.1and1.com","dbo732216864", "Linux2018", "db732216864");
-			if (mysqli_connect_errno()) {
-				echo '<p>Error: Could not connect to database.<br/>
-				Please try again later.</p>';
-				echo '<p>Error code is</p>'.mysqli_connect_error();
-				exit;
-			}
+		require '../datastore/db_connect.php';
 				
-		$sql = "INSERT INTO Class (classID, className, classSection, classSemester, classInstructor, 
-classScheduleMonStart, classScheduleMonEnd, classScheduleTuesStart, classScheduleTuesEnd, classScheduleWedStart, 
-classScheduleWedEnd, classScheduleThursStart, classScheduleThursEnd, classScheduleFriStart, classScheduleFriEnd)
-			VALUES ($class_id, $class_name, $class_section, $class_semester, $class_instructor, $mon_start, 
-$mon_end, $tue_start, $tue_end, $wed_start, $wed_end, $thu_start, $thu_end, $fri_start, $fri_end)";
+		$sql = "INSERT INTO Class (classID, className, classSection, classSemester, classInstructor, classScheduleMonStart, classScheduleMonEnd, 
+classScheduleTuesStart, classScheduleTuesEnd, classScheduleWedStart, classScheduleWedEnd, classScheduleThursStart, classScheduleThursEnd, 
+classScheduleFriStart, classScheduleFriEnd)
+			VALUES ($class_id, $class_name, $class_section, $class_semester, $class_instructor, $mon_start, $mon_end, $tue_start, $tue_end, 
+$wed_start, $wed_end, $thu_start, $thu_end, $fri_start, $fri_end)";
 
 		if ($db->query($sql) === TRUE) {
 			echo "New class created successfully";

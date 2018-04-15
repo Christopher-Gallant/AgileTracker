@@ -18,22 +18,11 @@
 	
 		$stu_id = $_POST["stu_id"];
 		$name = $_POST["name"];
-		$class_id1 = $_POST["class_id1"];	
-		$class_id2 = $_POST["class_id2"];
-		$class_id3 = $_POST["class_id3"];
-		$class_id4 = $_POST["class_id4"];
-		$class_id5 = $_POST["class_id5"];
 		
-		$db = mysqli_connect("db732216864.db.1and1.com","dbo732216864", "Linux2018", "db732216864");
-			if (mysqli_connect_errno()) {
-				echo '<p>Error: Could not connect to database.<br/>
-				Please try again later.</p>';
-				echo '<p>Error code is</p>'.mysqli_connect_error();
-				exit;
-			}
+		require '../datastore/db_connect.php';
 				
-		$sql = "INSERT INTO Attendee (studentID, name, classID)
-			VALUES ($stu_id, $name, $class_id1)";
+		$sql = "INSERT INTO Student (StudentID, Student_Name)
+			VALUES ($stu_id, $name)";
 
 		if ($db->query($sql) === TRUE) {
 			echo "New class created successfully";
