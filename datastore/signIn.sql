@@ -25,11 +25,8 @@ PRIMARY KEY (`classID`)
 
 CREATE TABLE `Role`
 (
- `roleID`   INT NOT NULL AUTO_INCREMENT ,
- `faculty`  INT NOT NULL ,
- `admin`    INT NOT NULL ,
- `webAdmin` INT NOT NULL ,
- `exec`     INT NOT NULL ,
+ `roleID`   INT NOT NULL AUTO_INCREMENT,
+ `role`  VARCHAR(15) NOT NULL,
 
 PRIMARY KEY (`roleID`)
 );
@@ -64,7 +61,9 @@ CREATE TABLE `User`
 (
  `userID`    INT NOT NULL AUTO_INCREMENT ,
  `userLogin` VARCHAR(45) NOT NULL ,
- `userName`  VARCHAR(45) NOT NULL ,
+ `userPass`  VARCHAR(45) NOT NULL ,
+ `userFName` VARCHAR(45) NOT NULL ,
+ `userLName` VARCHAR(45) NOT NULL ,
  `roleID`    INT NOT NULL ,
 
 PRIMARY KEY (`userID`),
