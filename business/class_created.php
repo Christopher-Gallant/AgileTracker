@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="../applications/assets/css/main.css">
 </head>
 <body class="alignh-center">
-	<h1 style="text-align:center;">Hello</h1>
+	<h1 style="text-align:center;">Class Creation</h1>
 	<div class="container" style="display:flex;flex-direction:row;width:85%;margin:auto;margin-top:25px;">
     <div class="container" style="width:100%;">
 	<?php

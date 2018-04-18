@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="../applications/assets/css/main.css">
 </head>
 <body class="alignh-center">
-	<h1 style="text-align:center;">Yeahhh</h1>
+	<h1 style="text-align:center;">Student Account</h1>
 	<div class="container" style="display:flex;flex-direction:row;width:85%;margin:auto;margin-top:25px;">
     <div class="container" style="width:100%;">
 	<?php
@@ -25,7 +25,7 @@
 			VALUES ($stu_id, $name)";
 
 		if ($db->query($sql) === TRUE) {
-			echo "New class created successfully";
+			echo "New student created successfully";
 		} else {
 			echo "Error: " . $sql . "<br>" . $db->error;
 		}	
