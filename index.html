@@ -8,7 +8,7 @@
   <!-- Normalize.css CDN: Aids in making browsers render all elements more consistently. -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <!-- AgileTracker CSS Framework -->
-  <link rel="stylesheet" href="../applications/assets/css/main.css">
+  <link rel="stylesheet" href="applications/assets/css/main.css">
 </head>
 <body class="alignh-center">
   <h1 style="text-align:center;"></h1>
@@ -16,17 +16,17 @@
     <div class="container" style="width:100%;">
       <h2 class="text-alignh-center">Attendance Tracker</h2>
       <br />
-      <form>
+      <form action="business/login.php" method="post">
         <section>
           <label for="username">Username</label><br>
           <input name="username" type="text" placeholder="user"></input>
         </section>
         <section>
-          <label for="username">Password</label><br>
-          <input name="username" type="text" placeholder="•••••••"></input>
+          <label for="password">Password</label><br>
+          <input name="password" type="text" placeholder="•••••••"></input>
         </section>
         <section>
-          <button type="button" name="button" class="form-button">Submit</button>
+          <input type="submit" value="Submit" name="button" class="form-button">
         </section>
       </form>
     </div>

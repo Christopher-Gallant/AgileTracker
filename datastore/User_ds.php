@@ -1,5 +1,5 @@
 <?php
-  require('../data/User.php');
+require('../data/User.php');
 
   class User_ds extends Users{
 
@@ -40,21 +40,19 @@
 
 
     public function selectSingle($key){
-      $qry = 'SELECT * FROM Users WHERE userID = ?';
-
+      $qry = 'SELECT * FROM User WHERE userLogin = ?';
       $stmt = $this->conn->prepare($qry);
       $stmt->bind_param('s', $key);
       $stmt->execute();
-
-      $stmt->bind_result(
-        $this->userID,
-        $this->userName
-      );
-
+      $stmt->bind_result($this->userID,$this->userLogin, $this->userFName, $this->userLName, $this->userPass, $this->roleID);
       $row = array();
-      while ($stmt->fetch()) {
-        array_push($row, $this->userID);
-        array_push($row, $this->userName);
+      while ($stmt->fetch()) {	      
+	    array_push($row, $this->userID);
+        array_push($row, $this->userLogin);
+        array_push($row, $this->userPass);
+        array_push($row, $this->userFName);
+        array_push($row, $this->userLName);
+        array_push($row, $this->roleID);
       }
       if (!empty($row)) {
           return $row;
