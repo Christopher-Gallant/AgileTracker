@@ -44,7 +44,7 @@ require('../data/User.php');
       $stmt = $this->conn->prepare($qry);
       $stmt->bind_param('s', $key);
       $stmt->execute();
-      $stmt->bind_result($this->userID,$this->userLogin, $this->userFName, $this->userLName, $this->userPass, $this->roleID);
+      $stmt->bind_result($this->userID,$this->userLogin, $this->userPass, $this->userFName, $this->userLName, $this->roleID);
       $row = array();
       while ($stmt->fetch()) {	      
 	    array_push($row, $this->userID);
